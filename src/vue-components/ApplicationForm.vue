@@ -29,7 +29,7 @@
                 <div class="application-form__input-block" data-aos="fade-left" data-aos-delay="200">
                     <label for="phone" class="application-form__label">Телефон</label>
 
-                    <masked-input required autocomplete="off" mask="\+\7 (111) 111-11-11" placeholder="+7(999)-328-14-2" @input="rawVal = arguments[1]" id="phone" class="application-form__input"/>
+                    <masked-input type="tel" required autocomplete="off" mask="\+\7 (111) 111-11-11" placeholder="+7(999)999-99-99" @input="rawVal = arguments[1]" id="phone" class="application-form__input"/>
                 </div>
             </li>
 
