@@ -1,0 +1,26 @@
+@import "../../common/styles/global-variables.less";
+
+.section-text {
+  padding: 60px 0 80px;
+  background-color: @white;
+  text-align: center;
+  @media(min-width: @medium){
+    padding: 80px 0 100px;
+    text-align: left;
+  }
+
+  &__content {
+
+    @media(min-width: @extra-large) {
+      max-width: 773px;
+    }
+  }
+
+  &__item {
+    margin-top: 24px;
+    color: @scarpa-flow;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: @font-family-roboto;
+  }
+}

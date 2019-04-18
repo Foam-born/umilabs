@@ -1,0 +1,51 @@
+@import "../../common/styles/global-variables.less";
+
+.section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  overflow-x: hidden;
+
+  &__content {
+    padding: 0 10px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    @media(min-width: @extra-small){
+      padding: 0 15px;
+    }
+
+    @media(min-width: @small){
+      padding: 0 30px;
+    }
+
+    @media(min-width: @extra-large){
+      padding: 0 0;
+      max-width: 1440px;
+    }
+  }
+
+  &__h2 {
+    font-family: @font-family-din-pro;
+    font-size: 32px;
+    line-height: 54px;
+    color: @mine-shaft;
+    @media(min-width: @extra-small){
+      font-size: 35px;
+    }
+    @media(min-width: @medium){
+      font-size: 48px;
+    }
+  }
+
+  &__h3 {
+    font-family: @font-family-din-pro;
+    font-size: 30px;
+    color: @black;
+    letter-spacing: -0.02em;
+    @media(min-width: @medium){
+      font-size: 40px;
+    }
+  }
+}

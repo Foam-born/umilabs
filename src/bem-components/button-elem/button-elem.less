@@ -1,0 +1,45 @@
+@import "../../common/styles/global-variables.less";
+
+.button-elem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover{
+    .button-elem__svg {
+      fill: @red-orange;
+    }
+    .button-elem__svg-icon {
+      background-color: fade(@gray, 10);
+    }
+  }
+
+  &__link {
+    color: @mine-shaft;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: @font-family-roboto;
+    text-decoration: none;
+    letter-spacing: .02em;
+    font-weight: bold;
+    transform: translateX(-10px);
+  }
+
+  &__svg-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    background-color: fade(@gray, 5);
+    border-radius: 50%;
+    transition: .3s;
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    fill: @tango;
+    transition: .3s;
+  }
+}

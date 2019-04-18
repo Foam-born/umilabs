@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>umilabs</title>
+
+    <style>
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 99;
+        transition: 2s;
+      }
+
+      .preloader--hidden {
+        opacity: 0;
+      }
+
+      .preloader__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+      }
+
+      .preloader__dash {
+        margin: 0 15px;
+        width: 35px;
+        height: 15px;
+        border-radius: 8px;
+        background: #F47821;
+        box-shadow: 0 0 10px 0 #FFFFFF;
+      }
+
+      .preloader__uno {
+        margin-right: -18px;
+        transform-origin: center left;
+        animation: spin 3s linear infinite;
+      }
+
+      .preloader__dos {
+        transform-origin: center right;
+        animation: spin2 3s linear infinite;
+        animation-delay: .2s;
+      }
+
+      .preloader__tres {
+        transform-origin: center right;
+        animation: spin3 3s linear infinite;
+        animation-delay: .3s;
+      }
+
+      .preloader__cuatro {
+        transform-origin: center right;
+        animation: spin4 3s linear infinite;
+        animation-delay: .4s;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(360deg);
+        }
+        30% {
+          transform: rotate(370deg);
+        }
+        35% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        20% {
+          transform: rotate(0deg);
+        }
+        30% {
+          transform: rotate(-180deg);
+        }
+        35% {
+          transform: rotate(-190deg);
+        }
+        40% {
+          transform: rotate(-180deg);
+        }
+        78% {
+          transform: rotate(-180deg);
+        }
+        95% {
+          transform: rotate(-360deg);
+        }
+        98% {
+          transform: rotate(-370deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+
+      @keyframes spin3 {
+        0% {
+          transform: rotate(0deg);
+        }
+        27% {
+          transform: rotate(0deg);
+        }
+        40% {
+          transform: rotate(180deg);
+        }
+        45% {
+          transform: rotate(190deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        62% {
+          transform: rotate(180deg);
+        }
+        75% {
+          transform: rotate(360deg);
+        }
+        80% {
+          transform: rotate(370deg);
+        }
+        85% {
+          transform: rotate(360deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin4 {
+        0% {
+          transform: rotate(0deg);
+        }
+        38% {
+          transform: rotate(0deg);
+        }
+        60% {
+          transform: rotate(-360deg);
+        }
+        65% {
+          transform: rotate(-370deg);
+        }
+        75% {
+          transform: rotate(-360deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <div class="preloader" id="preloader">
+    <div class="preloader__content">
+      <div class="preloader__dash preloader__uno"></div>
+      <div class="preloader__dash preloader__dos"></div>
+      <div class="preloader__dash preloader__tres"></div>
+      <div class="preloader__dash preloader__cuatro"></div>
+    </div>
+  </div>
+
+  <script>(function () {
+    const preloader = document.getElementById('preloader');
+    document.addEventListener('DOMContentLoaded', function () {
+      preloader.classList.add('preloader--hidden');
+      setTimeout(function () {
+        preloader.style.zIndex = -99;
+      }, 1000);
+    });
+  })();</script>
+
+    <div id="app">
+      <section class="section section-question">
+        <div class="section__content">
+          <div class="section-question__content">
+            <h2 class="section__h2 section-question__title" data-aos="fade-down" data-aos-delay="0">Ты готов стать профессионалом?</h2>
+
+            <p class="section-question__subtitle" data-aos="fade-up" data-aos-delay="200">Мы ищем <span class="section-question__orange-text">талантов</span> и <span class="section-question__orange-text">саппортов</span> в команду. Решите на какую категорию вы претендуете.</p>
+
+            <div class="button-elem section-question__button-elem" data-aos="fade-up" data-aos-delay="400">
+              <div class="button-elem__svg-icon">
+                <svg class="button-elem__svg">
+                  <use xlink:href="images/sprite.svg#symbol__union"></use>
+                </svg>
+              </div>
+
+              <a class="button-elem__link">Заполнить анкету</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-question__questionnaire">
+          <div class="section-question__questionnaire-content">Здесь должна быть анкета</div>
+        </div>
+      </section>
+
+      <section class="section section-features">
+        <div class="section-features__big-img-container">
+          <img src="./images/bg-min.jpg">
+        </div>
+
+        <div class="section-features__features-container" data-aos="fade-up">
+          <div class="section__content">
+            <ul class="section-features__features-list">
+              <li class="section-features__features-item">
+                <div class="section-features__feature-title">Прокачиваем мир</div>
+
+                <div class="section-features__feature-text">Вы хотите сделать мир лучше и не готовы ждать всю жизнь, чтобы начать это делать?</div>
+              </li>
+
+              <li class="section-features__features-item">
+                <div class="section-features__feature-title">Мотивируем себя</div>
+
+                <div class="section-features__feature-text">У вас есть собственная цель и вы не боитесь много работать, чтобы её достичь?</div>
+              </li>
+
+              <li class="section-features__features-item">
+                <div class="section-features__feature-title">Используем лучшее</div>
+
+                <div class="section-features__feature-text">Вы способны применять разные подходы для достижения своих целей?</div>
+              </li>
+
+              <li class="section-features__features-item">
+                <div class="section-features__feature-title">Относимся с пониманием</div>
+
+                <div class="section-features__feature-text">Вы не обвиняете других в свои неудачах и способны воспринимать критику?</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-text">
+        <div class="section__content">
+          <div class="section-text__content">
+            <h2 class="section__h2" data-aos="fade-right">Мы похожи!</h2>
+
+            <p class="section-text__item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">Не следует, однако забывать, что укрепление и развитие структуры представляет собой интересный
+              эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт рамки и место
+              обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+              Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации форм развития. </p>
+
+            <p class="section-text__item" data-aos="fade-up" data-aos-delay="600" data-aos-duration="400">Разнообразный и богатый опыт начало повседневной работы по формированию позиции способствует
+              подготовки и реализации дальнейших направлений развития. Равным образом дальнейшее развитие различных форм деятельности позволяет
+              оценить значение соответствующий условий активизации. С другой стороны постоянный количественный рост и сфера нашей активности позволяет
+              выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт укрепление и развитие структуры
+              позволяет оценить значение дальнейших направлений развития. Повседневная практика показывает, что консультация с широким активом
+              представляет собой интересный эксперимент проверки системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый
+              опыт укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-advantages">
+        <div class="section__content">
+          <div class="section-advantages__content">
+            <h3 class="section__h3 section-advantages__h3" data-aos="fade-down">Преимущества работы с нами</h3>
+
+            <ul class="section-advantages__list">
+              <li class="section-advantages__item" data-aos="fade-right" data-aos-delay="200">
+                <div class="section-advantages__icon">
+                  <svg class="section-advantages__icon-svg">
+                    <use xlink:href="images/sprite.svg#symbol__purse"></use>
+                  </svg>
+                </div>
+
+                <div class="section-advantages__title">Делимся оптом и навыками</div>
+
+                <div class="section-advantages__text">Мы обучаем коллег всему, что знаем сами. Наш опыт уникален и проверен временем, а команда постоянно совершенствует свои знания и навыки.</div>
+              </li>
+
+              <li class="section-advantages__item" data-aos="fade-up" data-aos-delay="400">
+                <div class="section-advantages__icon">
+                  <svg class="section-advantages__icon-svg">
+                    <use xlink:href="images/sprite.svg#symbol__purse"></use>
+                  </svg>
+                </div>
+
+                <div class="section-advantages__title">Стабильная зарплата</div>
+
+                <div class="section-advantages__text">Вы без задержек получаете официальную зарплату. Также мы оплачиваем больничные и даем возможность брать оплачиваемый отпуск до 4 недель в год.</div>
+              </li>
+
+              <li class="section-advantages__item" data-aos="fade-left" data-aos-delay="200">
+                <div class="section-advantages__icon">
+                  <svg class="section-advantages__icon-svg">
+                    <use xlink:href="images/sprite.svg#symbol__purse"></use>
+                  </svg>
+                </div>
+
+                <div class="section-advantages__title">Гибкий график</div>
+
+                <div class="section-advantages__text">Мы умеем работать с теми, кто еще не закончил получать образование. Вы можете работать неполный рабочий день, брать отгулы на время сессии и диплома.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-form">
+        <div class="section__content">
+          <div class="section-form__content">
+            <application-form></application-form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

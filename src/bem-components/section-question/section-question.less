@@ -1,0 +1,65 @@
+@import "../../common/styles/global-variables.less";
+
+.section-question {
+  padding: 65px 0;
+  background-color: @white;
+  @media(min-width: @medium){
+    padding: 165px 0 126px;
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-top: 24px;
+    color: @gun-powder;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: @font-family-roboto;
+  }
+
+  &__orange-text {
+    color: @tango;
+    font-weight: bold;
+  }
+
+  &__button-elem {
+    margin: 48px 0 0;
+  }
+
+  &__questionnaire {
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: fade(@black, 50);
+    z-index: -2;
+    transition: 0.3s;
+
+    &--visible {
+      opacity: 1;
+      z-index: 4;
+    }
+  }
+
+  &__questionnaire-content {
+    position: relative;
+    top: calc(50vh - 150px);
+    padding: 80px 30px;
+    text-align: center;
+    height: 300px;
+    max-width: 80vw;
+    border: 1px solid @cod-gray;
+    background-color: #ffffff;
+    color: @tango;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: @font-family-din-pro;
+    text-transform: uppercase;
+  }
+}
